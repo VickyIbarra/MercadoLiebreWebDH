@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.static(path.resolve(__dirname, '../Mercado Liebre/public')));
 
@@ -17,6 +17,5 @@ app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
 
-app.listen(PORT, ()=>{
-    console.log('Servidor funcionando');
-});
+app.listen(port, ()=>
+    console.log('Servidor funcionando'));
