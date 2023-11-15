@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
 
-app.use(express.static(path.resolve(__dirname, '../Mercado Liebre/public')));
+app.use(express.static('public'));
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
